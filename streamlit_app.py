@@ -11,6 +11,12 @@ load_dotenv()
 # ─────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────
+st.set_page_config(
+    page_title="Streaming AI Chat",
+    page_icon="⚡",
+    layout="centered"
+)
+
 def get_api_url():
     try:
         return st.secrets["API_URL"]
@@ -74,11 +80,6 @@ def stream_tokens(session_id: str, message: str, system_prompt: str):
                     pass
 
 
-st.set_page_config(
-    page_title="Streaming AI Chat",
-    page_icon="⚡",
-    layout="centered"
-)
 
 
 # ─────────────────────────────────────────
